@@ -1,34 +1,149 @@
-body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+/* @settings
+
+name: GStyles
+id: gstyles
+settings:
+
+
+*/
+
+:root, .theme-dark {
+    /* INTERFACE */
+    --g-accent: hsl(254, 80%, 60%);
+    --g-accent-h: 254;
+    --g-accent-s: 80%;
+    --g-accent-l: 60%;
+    --g-accent-rgb: 109, 71, 235;
+    --accent: var(--g-accent);
+    --accent-h: var(--g-accent-h);
+    --accent-s: var(--g-accent-s);
+    --accent-l: var(--g-accent-l);
+
+    /* COLORS */
+    /* COLORS/BASE */
+    --g-color-base-0: #1e1e1e;
+    --g-color-base: var(--g-color-base-0);
+    --g-color-base-min: var(--g-color-base-0);
+    --color-base-00: var(--g-color-base-0);
+
+    --g-color-base-1: #212121;
+    --color-base-05: var(--g-color-base-1);
+
+    --g-color-base-2: #242424;
+    --color-base-10: var(--g-color-base-2);
+
+    --g-color-base-3: #262626;
+    --color-base-20: var(--g-color-base-3);
+
+    --g-color-base-4: #2a2a2a;
+    --color-base-25: var(--g-color-base-4);
+
+    --g-color-base-5: #363636;
+    --color-base-30: var(--g-color-base-5);
+
+    --g-color-base-6: #3f3f3f;
+    --color-base-35: var(--g-color-base-6);
+
+    --g-color-base-7: #555555;
+    --color-base-40: var(--g-color-base-7);
+
+    --g-color-base-8: #666666;
+    --color-base-50: var(--g-color-base-8);
+
+    --g-color-base-9: #999999;
+    --color-base-60: var(--g-color-base-9);
+
+    --g-color-base-10: #bababa;
+    --color-base-70: var(--g-color-base-10);
+
+    --g-color-base-11: #dadada;
+    --g-color-base-max: var(--g-color-base-11);
+    --color-base-100: var(--g-color-base-11);
+
+    /* COLORS/SEMANTIC */
+    /* COLORS/SEMANTIC/TEXT */
+    
+
+    /* COLORS/EXTENDED */
+    --g-color-red: hsl(358, 96%, 63%);
+    --g-color-red-h: 358;
+    --g-color-red-s: 96%;
+    --g-color-red-l: 63%;
+    --g-color-red-rgb: 251, 70, 76;
+    --color-red: var(--g-color-red);
+    --color-red-rgb: var(--color-red-rgb);
+
+    --g-color-orange: hsl(31, 79%, 58%);
+    --g-color-orange-h: 31;
+    --g-color-orange-s: 79%;
+    --g-color-orange-l: 58%;
+    --g-color-orange-rgb: 233, 151, 63;
+    --color-orange: var(--g-color-orange);
+    --color-orange-rgb: var(--color-orange-rgb);
+
+    --g-color-yellow: hsl(59, 64%, 66%);
+    --g-color-yellow-h: 59;
+    --g-color-yellow-s: 64%;
+    --g-color-yellow-l: 66%;
+    --g-color-yellow-rgb: 224, 222, 113;
+    --color-yellow: var(--g-color-yellow);
+    --color-yellow-rgb: var(--color-yellow-rgb);
+
+    --g-color-green: hsl(138, 59%, 54%);
+    --g-color-green-h: 138;
+    --g-color-green-s: 59%;
+    --g-color-green-l: 54%;
+    --g-color-green-rgb: 68, 207, 110;
+    --color-green: var(--g-color-green);
+    --color-green-rgb: var(--color-green-rgb);
+
+    --g-color-cyan: hsl(179, 69%, 60%);
+    --g-color-cyan-h: 179;
+    --g-color-cyan-s: 69%;
+    --g-color-cyan-l: 60%;
+    --g-color-cyan-rgb: 83, 223, 221;
+    --color-cyan: var(--g-color-cyan);
+    --color-cyan-rgb: var(--color-cyan-rgb);
+
+    --g-color-blue: hsl(212, 100%, 50%);
+    --g-color-blue-h: 212;
+    --g-color-blue-s: 100%;
+    --g-color-blue-l: 50%;
+    --g-color-blue-rgb: 2, 122, 255;
+    --color-blue: var(--g-color-blue);
+    --color-blue-rgb: var(--color-blue-rgb);
+
+    --g-color-purple: hsl(258, 100%, 75%);
+    --g-color-purple-h: 258;
+    --g-color-purple-s: 100%;
+    --g-color-purple-l: 75%;
+    --g-color-purple-rgb: 168, 130, 255;
+    --color-purple: var(--g-color-purple);
+    --color-purple-rgb: var(--color-purple-rgb);
+
+    --g-color-pink: hsl(328, 91%, 79%);
+    --g-color-pink-h: 328;
+    --g-color-pink-s: 91%;
+    --g-color-pink-l: 79%;
+    --g-color-pink-rgb: 250, 153, 205;
+    --color-pink: var(--g-color-pink);
+    --color-pink-rgb: var(--color-pink-rgb);
+
+    /* HEADERS */
+
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
-}
-
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
-}
-
-.menu {
-	padding: var(--size-2-1);
-}
-
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
-
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+.theme-light {
+    --color-base-00: #ffffff;
+    --color-base-05: #fcfcfc;
+    --color-base-10: #fafafa;
+    --color-base-20: #f6f6f6;
+    --color-base-25: #e3e3e3;
+    --color-base-30: #e0e0e0;
+    --color-base-35: #d4d4d4;
+    --color-base-40: #bdbdbd;
+    --color-base-50: #ababab;
+    --color-base-60: #707070;
+    --color-base-70: #5a5a5a;
+    --color-base-100: #222222;
 }
